@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "WnPI+B12S97NPYQN1b4VCT+zAwg4xT61fqganitK1D8=",
+  "Source": "JashimApi",
+  "BasePath": "_content/JashimApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "JashimApi\\wwwroot",
+      "Source": "JashimApi",
+      "ContentRoot": "D:\\Jashim\\Job\\Jashim - Surbana Jurong\\JashimApi\\wwwroot\\",
+      "BasePath": "_content/JashimApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Jashim\\Job\\Jashim - Surbana Jurong\\JashimApi\\wwwroot\\Resume\\person-0-labour market.pdf",
+      "SourceId": "JashimApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jashim\\Job\\Jashim - Surbana Jurong\\JashimApi\\wwwroot\\",
+      "BasePath": "_content/JashimApi",
+      "RelativePath": "Resume/person-0-labour market.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Resume\\person-0-labour market.pdf"
+    },
+    {
+      "Identity": "D:\\Jashim\\Job\\Jashim - Surbana Jurong\\JashimApi\\wwwroot\\Resume\\person-0-Resume of Jashim Uddin.pdf",
+      "SourceId": "JashimApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jashim\\Job\\Jashim - Surbana Jurong\\JashimApi\\wwwroot\\",
+      "BasePath": "_content/JashimApi",
+      "RelativePath": "Resume/person-0-Resume of Jashim Uddin.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Resume\\person-0-Resume of Jashim Uddin.pdf"
+    },
+    {
+      "Identity": "D:\\Jashim\\Job\\Jashim - Surbana Jurong\\JashimApi\\wwwroot\\Resume\\person-0-slide size 7.pdf",
+      "SourceId": "JashimApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jashim\\Job\\Jashim - Surbana Jurong\\JashimApi\\wwwroot\\",
+      "BasePath": "_content/JashimApi",
+      "RelativePath": "Resume/person-0-slide size 7.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Resume\\person-0-slide size 7.pdf"
+    }
+  ]
+}

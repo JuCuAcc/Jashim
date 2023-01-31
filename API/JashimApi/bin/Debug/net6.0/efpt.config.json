@@ -1,0 +1,93 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "CRUDDBContext",
+   "ContextNamespace": "Data",
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": "Models",
+   "OutputContextPath": "Data",
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "JashimApi",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[City]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Country]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Language]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Person]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PersonLanguage]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DeletePerson]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[DeleteResumeFile]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetAllPersons]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetPersonById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetResumeFileById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetResumeFileByPersonId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[InsertPerson]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[InsertResumeFile]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdatePerson]",
+         "ObjectType": 1
+      }
+   ],
+   "UiHint": "(localdb)\\MSSQLLocalDB.CRUDDB",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
