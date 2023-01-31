@@ -1,0 +1,18 @@
+<h1 mat-dialog-title style="text-align: center; font-weight: bold; color:red; background-color:azure">Confirm Deletion</h1>
+<div mat-dialog-content style="margin: 10px;">
+  <!--<p style="font-size: 16px;">Are you sure you want to delete the following data?</p>-->
+
+  <br />
+  <p style="font-size: 16px; color:blue">Are you sure to delete the person<br /><b>{{data.name}}</b> with Id: <b>{{data.id}}</b> ?</p>
+
+  <br /><br />
+  <p><strong>Id:</strong> {{data.id}}</p>
+  <p><strong>Name:</strong> {{data.name}}</p>
+  <!--<p><strong>CountryId:</strong> {{data.country}}</p>
+  <p><strong>CityId:</strong> {{data.city}}</p>-->
+</div>
+<div mat-dialog-actions style="display: flex; justify-content: flex-end; background-color:azure">
+  <button mat-button (click)="onNoClick()" class="btn btn-primary">No</button>
+  <!--<button mat-button [mat-dialog-close]="true" cdkFocusInitial>Yes</button>-->
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="btn btn-danger">Yes</button>
+</div>

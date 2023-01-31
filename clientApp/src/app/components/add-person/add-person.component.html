@@ -1,0 +1,85 @@
+<div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</div>
+
+<div class="container my-5">
+  <h1 class="mb-3">
+  <span class="glyphicon glyphicon-envelope" style="background-color:deeppink; resize:block; color:white; border: 3px solid deeppink;"></span>
+  Personal Information
+  </h1>
+
+  <div class="row">
+    <div class="col-6">
+      <!--<form #form="ngForm" (ngSubmit)="onAddPerson()" enctype="multipart/form-data">-->
+      <!--<form #form="ngForm" (ngSubmit)="addPerson(addPersonRequest)" enctype="multipart/form-data">-->
+      <!--<form #form="ngForm" (ngSubmit)="onSubmit(form)">-->
+      <form #form="ngForm" (ngSubmit)="savePerson(form.value)">
+        <div class="mb-3 form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required
+                 name="name" [(ngModel)]="person.name" autocomplete="on">
+        </div>
+
+
+
+        <div class="mb-3 from-group">
+          <label for="country" class="form-label">Country</label>
+          <select id="country" class="form-control" name="country" [(ngModel)]="addPersonRequest.countryId" (change)="loadCities()">
+            <option [ngValue]="0">--Select Country--</option>
+            <option id="countryId" *ngFor="let country of countries" [value]="country.id">{{country.name}}</option>
+          </select>
+        </div>
+
+
+        <div class="mb-3 from-group">
+          <label for="city" class="form-label">City</label>
+          <select id="city" class="form-control" name="city" [(ngModel)]="addPersonRequest.cityId" *ngIf="cities">
+            <option [ngValue]="0">--Select City--</option>
+            <option id="cityId" *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
+          </select>
+          <div class="text-center" *ngIf="!cities">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mb-6 form-group">
+          <label for="languageSkills" class="form-label">Language Skills</label>
+          <div [ngModelGroup]="'languageSkills'" class="language-skills-group">
+            <div *ngFor="let language of languages" class="language-skill-item">
+              <input type="checkbox" [(ngModel)]="language.isChecked" [value]="language.id" name="language">
+              <label for="{{language.name}}">{{language.name}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="file">Resume</label>
+          <input id="resumeFileName"
+                 name="resumeFileName"
+                 type="file"
+                 class="form-control"
+                 (change)="onFileSelected($event)"
+                 accept=".pdf,.doc"
+                 [(ngModel)]="person.resumeFileName"
+                 #resumeFileName="ngModel">
+        </div>
+
+
+        <div class="mb-3 form-group">
+          <label for="dateOfBirth" class="form-label">Date Of Birth</label>
+          <!--<input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" [value]="addPersonRequest.dateOfBirth | date: 'yyyy-MM-dd'">-->
+          <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required [(ngModel)]="person.dateOfBirth" #dateOfBirth="ngModel">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Save</button>
+
+      </form>
+    </div>
+  </div>
+</div>

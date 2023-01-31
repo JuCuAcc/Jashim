@@ -1,0 +1,86 @@
+<div class="container my-5">
+  <h1 class="mb-3">Edit Person</h1>
+
+
+  <div class="row">
+    <div class="col-6">
+      <!--<form #form="ngForm" (ngSubmit)="updatePerson(form.value)">-->
+      <form [formGroup]="updateForm" #form="ngForm" (ngSubmit)="updatePerson(form.value)">
+        <div class="mb-3">
+          <label for="id" class="form-label">Id</label>
+          <input type="text" formControlName="id" class="form-control" id="id" readonly
+                 name="id" [(ngModel)]="personDetails.id">
+        </div>
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" formControlName="name" class="form-control" id="name"
+                 name="name" [(ngModel)]="personDetails.name" required>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+          <select id="country" formControlName="country" class="form-control" name="country" [(ngModel)]="personDetails.countryId" (change)="loadCities()">
+            <option [ngValue]="0">--Select Country--</option>
+            <option *ngFor="let country of countries" [value]="country.id">{{country.name}}</option>
+          </select>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <select id="city" formControlName="city" class="form-control" name="city" [(ngModel)]="personDetails.cityId" *ngIf="cities">
+            <option [ngValue]="0">--Select City--</option>
+            <option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
+          </select>
+          <div class="text-center" *ngIf="!cities">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+
+
+        <!--<div class="mb-6">
+  <label for="languageSkills" class="form-label">Language Skills</label>
+  <div [ngModelGroup]="'languageSkills'" class="language-skills-group">
+    <div *ngFor="let language of languages" class="language-skill-item">-->
+        <!--<input type="checkbox" [(ngModel)]="language.isChecked" [value]="language.id" name="language">-->
+        <!--<input type="checkbox" [(ngModel)]="isChecked" [value]="language.id" name="language">
+        <label for="{{language.name}}">{{language.name}}</label>
+      </div>
+    </div>
+  </div>-->
+
+
+        <div class="mb-6">
+          <label for="languageSkills" class="form-label">Language Skills</label>
+          <div [ngModelGroup]="'languageSkills'" class="language-skills-group">
+            <div *ngFor="let language of languages" class="language-skill-item">
+              <input type="checkbox" formControlName="languages" [(ngModel)]="language.isChecked" [value]="language.id" name="language">
+              <label for="{{language.name}}">{{language.name}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="resumeFileName" class="form-label">Resume</label>
+          <input type="file" formControlName="resumeFileName" class="form-control" id="resumeFileName"
+                 name="resumeFileName" (change)="onFileSelected($event)">
+          <!--<input type="file" (change)="selectedFile ='onFileSelected($event)'">-->
+
+        </div>
+
+        <div class="mb-3">
+          <label for="dateOfBirth" class="form-label">Date Of Birth</label>
+          <input type="date" formControlName="dateOfBirth" class="form-control" id="dateOfBirth"
+                 name="dateOfBirth" [(ngModel)]="personDetails.dateOfBirth" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary mr-5" routerLink="" [disabled]="!form.valid">Save</button>
+        <button type="button" class="btn btn-danger" (click)="deletePerson(personDetails.id)">Delete</button>
+      </form>
+    </div>
+  </div>
+</div>

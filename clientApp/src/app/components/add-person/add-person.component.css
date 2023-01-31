@@ -1,0 +1,19 @@
+.language-skills-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.language-skill-item {
+  margin: 0 10px 10px 0;
+}
+
+
+/*.checkbox-inline {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.checkbox-label {
+  margin-left: 5px;
+}
+*/

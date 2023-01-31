@@ -1,0 +1,55 @@
+<div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</div>
+
+<div class="container my-5">
+  <h1 class="mb-3"> <span class="glyphicon glyphicon-list-alt" style="background-color: deeppink; resize: block; color: white; border: 3px solid deeppink"></span>Informations</h1>
+
+  <table class="table" *ngIf="people && people.length > 0">
+    <!--<table mat-table [dataSource]="dataSource" matSort #sort="matSort" class="table"  *ngIf="people && people.length > 0">-->
+    <!--<table mat-table [dataSource]="people" matSort #sort="matSort" class="table"  *ngIf="people && people.length > 0">-->
+    <thead>
+      <tr>
+        <th class="text-center">#</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Language Skills</th>
+        <th>Resume</th>
+        <th>Date Of Birth</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{person.id}}</td>
+        <td>{{person.name}}</td>
+        <td>{{getCountryName(person.countryId)}}</td>
+        <td>{{getCityName(person.cityId)}} </td>
+        <td>{{person.languageSkills}} </td>
+        <td>
+          <a href="{{getResumeFile(person.resumeFileName)}}">
+            {{person.resumeFileName}}
+            <span class="glyphicon glyphicon-download-alt"></span>
+          </a>
+        </td>
+        <td> {{person.dateOfBirth | date: 'dd MMM yyyy'}} </td>
+        <td>
+          <a [routerLink]="['/people', 'edit', person.id]" class="download-icon-view">
+            <span class="glyphicon glyphicon-eye-open"></span>
+          </a>
+          <a [routerLink]="['/people', 'edit', person.id]" class="download-icon-edit">
+            <span class="	glyphicon glyphicon-pencil"></span>
+          </a>
+          <a class="download-icon-remove" (click)="openDeleteConfirmationDialog(person)">
+            <span class="glyphicon glyphicon-remove"></span>
+          </a>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!people || people.length <= 0">No Person Found</p>
+</div>

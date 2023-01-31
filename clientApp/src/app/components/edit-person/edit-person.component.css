@@ -1,0 +1,10 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.language-skills-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.language-skill-item {
+  margin: 0 10px 10px 0;
+}

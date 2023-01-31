@@ -1,0 +1,38 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+a {
+  text-decoration: none;
+}
+
+.download-icon-remove {
+  display: inline-block;
+  width: 15px;
+  height: 19px;
+  background-color:red;
+  color: white;
+  margin-left: 3px;
+  right: 3px;
+  border-radius: 3px;
+}
+
+.download-icon-edit {
+  display: inline-block;
+  width: 15px;
+  height: 19px;
+  background-color: forestgreen;
+  color: white;
+  margin-left: 3px;
+  right: 3px;
+  border-radius: 3px;
+}
+
+.download-icon-view {
+  display: inline-block;
+  width: 15px;
+  height: 19px;
+  background-color: deepskyblue;
+  color: white;
+  margin-left: 3px;
+  right: 3px;
+  border-radius: 3px;
+}
